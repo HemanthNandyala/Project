@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
         else
         this.foods = foodService.getAll();
       })
-      this.foods = foodService.getAll();
+
   }
 
   ngOnInit(): void {
