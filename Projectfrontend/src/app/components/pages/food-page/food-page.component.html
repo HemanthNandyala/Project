@@ -1,1 +1,31 @@
-<p>food-page works!</p>
+<div class="container">
+    <img [src]="food.imageUrl" [alt]="food.name" />
+
+    <div class="details">
+
+        <div class="header">
+            <span class="name">
+                {{food.name}}
+            </span>
+        </div>
+
+
+
+        <div class="tags">
+            <a *ngFor="let tag of food.tags" routerLink="/tag/{{tag}}">
+              {{tag}}
+
+            </a>
+        </div>
+
+        <div class="price">
+            <span>
+              {{food.price|currency : '&#8377;'}}
+            </span>
+        </div>
+
+        <button (click)="addToCart()">Add To Cart</button>
+
+    </div>
+
+</div>

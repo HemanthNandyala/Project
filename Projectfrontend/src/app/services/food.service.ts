@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { sample_foods, sample_tags } from 'src/data';
 import { Food } from '../shared/models/food';
-import { Tag } from '../shared/Tag';
+
+import { Tag } from '../shared/models/Tag';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class FoodService {
     return sample_foods ;
   }
 
-  getAllFoodsBySearchTerm(searchTerm:string){
+  getAllFoodsBySearchTerm(searchTerm: string){
     return this.getAll().filter(food => food.name.toLowerCase().includes(searchTerm.toLowerCase()));
   }
 
@@ -23,13 +24,13 @@ export class FoodService {
   }
 
   getAllFoodsByTag(tag: string): Food[] {
-    return tag == "All" ?
+    return tag ===  "All" ?
       this.getAll() :
       this.getAll().filter(food => food.tags?.includes(tag));
   }
 
-  getFoodById(id: number): Food{
-    return this.getAll().find(food => food.id == food.id) ?? new Food();
+  getFoodById(foodId:string):Food{
+    return this.getAll().find(food => food.id === foodId) ?? new Food();
   }
 
 }
