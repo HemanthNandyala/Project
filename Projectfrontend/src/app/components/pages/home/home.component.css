@@ -10,7 +10,7 @@ ul {
 li a {
     height: 22.5rem;
     width: 20rem;
-    border: 1px solid whitesmoke;
+    border: 1px solid rgb(248, 68, 68);
     border-radius: 1rem;
     margin: 0.5rem;
     display: flex;
@@ -26,7 +26,7 @@ li a:hover {
 
 li a image {
     object-fit: cover;
-    height: 14.5rem;
+    height: 10.5rem;
 }
 
 .content {
@@ -46,8 +46,7 @@ li a image {
     position: absolute;
     bottom: 0;
     left: 0.9rem;
-    background: white;
-    padding: 0.3rem 100% 0 0;
+    background: rgb(235, 222, 222);
     margin-top: 0.7rem;
     font-size: 1.1;
 }
